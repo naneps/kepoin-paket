@@ -116,8 +116,8 @@ export default function Home() {
                 <p>Courier: {searchResult.data.summary.courier}</p>
                 {/* Render other data properties */}
                 {
-                  searchResult.data.history.map((history) => (
-                    <div>
+                  searchResult.data.history.map((history, index) => (
+                    <div key={index}>
                       <p>Date: {history.date}</p>
                       <p>Desc: {history.desc}</p>
                       <p>Location: {history.location}</p>
