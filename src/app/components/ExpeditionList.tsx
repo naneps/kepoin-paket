@@ -84,6 +84,9 @@ const ExpeditionList = ({ onSelect }: ExpeditionListProps) => {
                     ))}
                 </ul>
             )}
+            {!expeditions.some((expedition) => expedition.selected) && (
+                <p className="text-red-500 text-sm">At least one item must be selected.</p>
+            )}
         </div>
     );
 };
