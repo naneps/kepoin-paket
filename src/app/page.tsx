@@ -124,7 +124,7 @@ export default function Home() {
             {searchResult.data && (
               <div>
                 <p>Nomor resi: {searchResult.data.summary.awb}</p>
-                <p>Jasa ekspedisi: {searchResult.data.summary.courier}</p>
+                <p className='mb-3'>Jasa ekspedisi: {searchResult.data.summary.courier}</p>
                 {/* Render other data properties */}
                 {searchResult.data.history.map((history, index) => (
                   <div key={index}>
