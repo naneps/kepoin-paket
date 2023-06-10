@@ -70,15 +70,15 @@ const ExpeditionList = ({ onSelect }: ExpeditionListProps) => {
     };
 
     return (
-        <div>
+        <div className="flex flex-col items-center justify-center md:justify-start w-full mt-2">
             {error ? (
                 <p>{error}</p>
             ) : (
-                <ul className="flex space-x-2">
+                <ul className="flex flex-wrap justify-center space-x-2">
                     {expeditions.map((expedition) => (
                         <li
                             key={expedition.id_resi}
-                            className={`px-3 py-1 rounded text-2xl ${expedition.selected ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'
+                            className={`px-3 py-1 rounded text-base md:text-2xl mb-3 ${expedition.selected ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'
                                 }`}
                             onClick={() => handleSelect(expedition.id_resi)}
                         >
