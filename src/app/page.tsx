@@ -77,7 +77,7 @@ export default function Home() {
   };
 
   const handleSearchClick = () => {
-    const api_key = 'de39ea0b088a1c792ed4df498ef4c2548b4c88329a8409cca341710c97dffc61';
+    const api_key = 'ffa2e0c1464d773d0d2ccc2a4cdfb6512dee0d09307b49662afa63caae1a826e';
     const awb = awbInput;
     const courier = selectedExpedition?.nama_jasa_pengiriman;
 
