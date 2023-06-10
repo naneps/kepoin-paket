@@ -5,7 +5,7 @@ import ExpeditionList from './components/ExpeditionList';
 
 type SelectedExpedition = {
   id_resi: string;
-  nama_jasa_pengiriman: string;
+  kode_ekspedisi: string;
   selected: boolean;
 };
 type SearchResult = {
@@ -79,7 +79,7 @@ export default function Home() {
   const handleSearchClick = () => {
     const api_key = '7593a38f6bc91459f453a20fe8e5a9ac7fabbeb4ed036e0544fe65790583ae58';
     const awb = awbInput;
-    const courier = selectedExpedition?.nama_jasa_pengiriman;
+    const courier = selectedExpedition?.kode_ekspedisi;
 
     if (awb && courier) {
       searchResi(api_key, awb, courier);

@@ -5,10 +5,12 @@ import { useEffect, useState } from 'react';
 type Expedition = {
     id_resi: string;
     nama_jasa_pengiriman: string;
+    kode_ekspedisi: string;
 };
 
 type SelectedExpedition = {
     id_resi: string;
+    kode_ekspedisi: string;
     nama_jasa_pengiriman: string;
     selected: boolean;
 };
@@ -35,6 +37,7 @@ const ExpeditionList = ({ onSelect }: ExpeditionListProps) => {
             const initialExpeditions = response.data.data.map((expedition: Expedition) => ({
                 id_resi: expedition.id_resi,
                 nama_jasa_pengiriman: expedition.nama_jasa_pengiriman,
+                kode_ekspedisi: expedition.kode_ekspedisi,
                 selected: false,
             }));
             setExpeditions(initialExpeditions);
