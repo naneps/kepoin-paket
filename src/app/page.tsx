@@ -55,7 +55,7 @@ export default function Home() {
 
     // Perform the resi search using the provided parameters
 
-    const apiUrl = `${apiResi}?api_key=${api_key}&awb=${awb}&courier=${courier}`;
+    const apiUrl = `https://api.binderbyte.com/v1/track?api_key=${api_key}&awb=${awb}&courier=${courier}`;
 
     // Make the API request
     axios
@@ -63,7 +63,9 @@ export default function Home() {
       .then(({ data }) => {
         console.log('Search result:', data);
         setSearchResult(data);
-        setIsLoading(false); // Stop loading indicator
+        setIsLoading(false);
+        setError(false);
+         // Stop loading indicator
       })
       .catch((error: AxiosError) => {
         console.error('Error searching resi:', error);
@@ -75,7 +77,7 @@ export default function Home() {
   };
 
   const handleSearchClick = () => {
-    const api_key = apiResiKey ?? '';
+    const api_key = apiResiKey ?? '7593a38f6bc91459f453a20fe8e5a9ac7fabbeb4ed036e0544fe65790583ae58';
     const awb = awbInput;
     const courier = selectedExpedition?.kode_ekspedisi;
 
